@@ -1,0 +1,10 @@
+<div>
+  <h1>Chicago Photo Blog</h1>
+  <%= link_to "Create New Post", "/posts/new" %>
+</div>
+
+<% @posts.each do |p| %>
+  <h2><%= p.title  %></h2>
+  <p><%= p.desc[0,250]%> ... <%=link_to "read more", show_post_url(p.id) %> </p>
+  <p><%= "~Written by #{p.author } on #{p.date}" %></p>
+<% end %>

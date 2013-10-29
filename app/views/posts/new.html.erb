@@ -1,0 +1,20 @@
+
+<h1>Create New Blog Post</h1>
+
+<%= form_tag "/posts", method: "post" do %>
+
+  <label for="title">Title:</label>
+  <input id="title" type="text" name="title" value="" size="60">
+    <br>
+  <label for="desc">Description:</label>
+  <textarea id="desc" name="desc"  cols="60" rows="5"></textarea>
+    <br>
+  <%= label_tag 'date', 'Date' %>
+   <%= text_field_tag 'date'   %>
+    <br>
+   <%= label_tag 'author', "Author:" %>
+   <%= text_field_tag 'author'   %>
+    <br>
+<%= submit_tag 'Create New Post' %>
+<% end %>
+

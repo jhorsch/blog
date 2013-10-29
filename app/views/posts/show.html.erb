@@ -1,0 +1,12 @@
+
+
+<h1><%= @item.title %></h1>
+
+<p><%= link_to "Edit", edit_post_url(@item.id) %>&nbsp; | &nbsp;<%= link_to "Delete", kill_post_url(@item.id), method: 'delete' %>&nbsp; | &nbsp;<%= link_to "Home Page" , homepage_url %> </p>
+
+
+<p><%= @item.desc %><p>
+<img src=<%= @item.img %> width = "600px" >
+<p><em><%= "Written by #{@item.author} on #{@item.date }."%></em></p>
+
+
