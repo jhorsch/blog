@@ -1,3 +1,6 @@
+ruby '2.0.0'
+
+
 source 'https://rubygems.org'
 
 
@@ -34,8 +37,17 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'rails_12factor', group: :production
-gem 'pg'
+group :development do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
