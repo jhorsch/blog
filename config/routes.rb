@@ -1,6 +1,7 @@
 Blog::Application.routes.draw do
 
 
+
 get 'posts' => 'posts#index', :as => 'homepage'
 
 get 'posts/new' =>  'posts#new' , :as => 'new_post'
